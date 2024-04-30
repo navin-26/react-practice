@@ -64,7 +64,7 @@ function TeamSection() {
   ];
 
   return (
-    <div className="h-[1130px] bg-indigo-900 relative overflow-hidden text-white">
+    <div className="h-[1130px]  relative overflow-hidden text-white">
       <div className="h-auto w-auto ml-[115px] mt-[100px] mr-33">
         <div className="w-[754px] h-[179px]">
           <h3 className="text-[42px] font-bold">Startup Crew</h3>

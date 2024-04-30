@@ -1,17 +1,56 @@
+
 import HeroImg from "../assets/form.png";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 function Form() {
   const [isSignupActive, setIsSignupActive] = useState(true);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+ 
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform validation
+    const formErrors = validateForm(formData);
+    setErrors(formErrors);
+    if (Object.keys(formErrors).length === 0) {
+      // Form is valid, submit the data or perform other actions
+      console.log("Form submitted:", formData);
+    } else {
+      // Form is invalid, do not submit
+      console.error("Form validation errors:", formErrors);
+    }
+  };
+
+  const validateForm = (data) => {
+    let errors = {};
+    if (!data.email) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+      errors.email = "Email is invalid";
+    }
+    if (!data.password) {
+      errors.password = "Password is required";
+    } else if (data.password.length < 6) {
+      errors.password = "Password must be at least 6 characters long";
+    }
+    return errors;
   };
 
   return (
@@ -33,10 +72,7 @@ function Form() {
           </p>
         </div>
 
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="w-[480px] h-[550px] md:w-1/2 bg-white rounded-lg shadow-md px-0 py-6 max-w-md ml-8 "
-        >
+        <div className="w-[480px] h-[] md:w-1/2 bg-white rounded-lg shadow-md px-0 py-6 max-w-md ml-8 ">
           <div className="flex justify-between">
             <span
               className={`w-full border-b-4 pb-4 ${
@@ -44,7 +80,11 @@ function Form() {
               }`}
             >
               <button
-                onClick={() => setIsSignupActive(true)}
+                onClick={() => {
+                  setIsSignupActive(true);
+                  setErrors({});
+                  setFormData({}); // Clear any existing errors
+                }}
                 className={`text-[14px] font-semibold focus:outline-none tracking-widest ${
                   isSignupActive
                     ? "text-purple-950"
@@ -60,7 +100,11 @@ function Form() {
               }`}
             >
               <button
-                onClick={() => setIsSignupActive(false)}
+                onClick={() => {
+                  setIsSignupActive(false);
+                  setErrors({});
+                  setFormData({}); // Clear any existing errors
+                }}
                 className={`text-[14px] font-semibold focus:outline-none tracking-widest ${
                   !isSignupActive
                     ? "text-purple-950"
@@ -71,64 +115,72 @@ function Form() {
               </button>
             </span>
           </div>
-          <div className="px-16 pb-10">
+          <form onSubmit={handleSubmit} className="px-16 pb-10">
             <h2 className="text-2xl font-bold text-center mb-6">
               {isSignupActive ? "Sign Up" : "Login"}
             </h2>
             <div className="space-y-8">
-              <div className="flex flex-col">
-                <input
-                  type="email"
-                  id="email"
-                  className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
-                     text-black border text-[18px] border-gray-300 rounded-3xl"
-                  placeholder="Your email"
-                  {...register("email", {
-                    required: "Username is required",
-                    pattern: {
-                      value: /^\S+@\S+$/i,
-                      message: "This is not a valid email",
-                    },
-                  })}
-                />
-                <p className="text-red-700">{errors.email?.message}</p>
-              </div>
               {isSignupActive && (
-                <div className="flex flex-col">
-                  <input
-                    type="password"
-                    id="password"
-                    className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
+                <>
+                  <div className="flex flex-col">
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
                      text-black border text-[18px] border-gray-300 rounded-3xl"
-                    placeholder="Your password"
-                    {...register("password", {
-                      required: "Password is required",
-                      minLength: {
-                        value: 8,
-                        message: "Password must be more than 8 characters",
-                      },
-                    })}
-                  />
-                  <p className="text-red-700">{errors.password?.message}</p>
-                </div>
+                      placeholder="Your email"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    {errors.email && (
+                      <p className="text-red-700">{errors.email}</p>
+                    )}
+                  </div>
+                  <div className="flex flex-col">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
+                     text-black border text-[18px] border-gray-300 rounded-3xl"
+                      placeholder="Your password"
+                      value={formData.password}
+                      onChange={handleChange}
+                    />
+                    <p className="text-red-700">{errors.password}</p>
+                  </div>
+                </>
               )}
               {!isSignupActive && (
-                <div className="flex flex-col ">
-                  <input
-                    type="password"
-                    id="password"
-                    className="shadow-sm py-2 px-3 w-full  placeholder-gray-500 text-black border border-gray-300 rounded-3xl"
-                    placeholder="Your password"
-                    {...register("password", {
-                      required: "Password is required",
-                      minLength: {
-                        value: 8,
-                        message: "Password must be more than 8 characters",
-                      },
-                    })}
-                  />
-                  <p className="text-red-700">{errors.password?.message}</p>
-                </div>
+                <>
+                  <div className="flex flex-col">
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
+                     text-black border text-[18px] border-gray-300 rounded-3xl"
+                      placeholder="Your email"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    <p className="text-red-700">{errors.email}</p>
+                  </div>
+                  <div className="flex flex-col ">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
+                     text-black border text-[18px] border-gray-300 rounded-3xl"
+                      placeholder="Your password"
+                      value={formData.password}
+                      onChange={handleChange}
+                    />
+                    <p className="text-red-700">{errors.password}</p>
+                  </div>
+                </>
               )}
               {!isSignupActive && (
                 <div className="flex items-center justify-between mb-4">
@@ -146,10 +198,7 @@ function Form() {
                   </a>
                 </div>
               )}
-              <button
-                type="submit"
-                className="bg-teal-400 text-white py-2 px-4 font-medium hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-[330px] h-[50px] rounded-3xl"
-              >
+              <button className="bg-teal-400 text-white py-2 px-4 font-medium hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-[330px] h-[50px] rounded-3xl">
                 {isSignupActive ? "Create an Account" : "Login"}
               </button>
               <div className="flex items-center my-3">
@@ -157,15 +206,12 @@ function Form() {
                 <span className="mx-4 text-gray-400 ">or</span>
                 <hr className="flex-grow border-gray-300" />
               </div>
-              <button
-                type="submit"
-                className="bg-blue-500 text-white py-2 px-4 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-[330px] h-[50px] rounded-3xl"
-              >
+              <button  className="bg-blue-500 text-white py-2 px-4 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-[330px] h-[50px] rounded-3xl">
                 {isSignupActive ? "Login via Twitter" : "Login via Twitter"}
               </button>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </section>
     </div>
   );

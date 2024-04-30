@@ -25,8 +25,8 @@ function TestimonialCard({ image, text, author }) {
 
 function TestimonialSection() {
   return (
-    <section className="relative overflow-hidden h-[800px] bg-indigo-950">
-      <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-indigo-900 opacity-45"></div>
+    <section className="relative overflow-hidden h-[800px] bg">
+      
 
       <div className=" mx-52  relative h-screen top-[100px]">
         <div className=" w-[364px] ">

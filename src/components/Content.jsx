@@ -1,10 +1,10 @@
-import HeroImg from "../assets/content.jpeg";
+import HeroImg from "../assets/content.png";
 import React from "react";
 
 function content() {
   return (
     <div className="relative overflow-hidden h-">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-950 to-purple-800 opacity-45 z-10"></div>
+     
       <img
         src={HeroImg}
         alt=""

@@ -1,4 +1,4 @@
-import HeroImg from "../assets/call-to-action.jpeg";
+import HeroImg from "../assets/call-to-action.png";
 import { FaPlay } from "react-icons/fa";
 import ScrollIndicator from "./ScrollIndicator";
 
@@ -10,7 +10,7 @@ function CallToAction() {
         alt=""
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-950 to-purple-800 opacity-45"></div>
+     
 
       <div className="relative text-white grid grid-rows-3 gap-4 justify-items-center my-20 w-[770px] ml-[315px]">
         <h1 className="text-[58px] text-balance text-center font-semibold leading-tight">

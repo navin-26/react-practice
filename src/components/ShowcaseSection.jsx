@@ -20,13 +20,16 @@ function Showcases({ image, project, name }) {
 
 function ShowcaseSection() {
   return (
-    <div className="flex flex-col items-center bg-indigo-900 h-[1130px] ">
+    <div
+      id="works"
+      className="flex flex-col items-center  h-[1130px] "
+    >
       <div className="relative overflow-hidden px-[200px] py-[80px] text-white w-[970]">
         <div className="flex justify-between mb-6 w-[970]">
           <h3 className="text-[40px] font-bold w-[213px]  h-[52px]">
             Last works
           </h3>
-          <button className="border-white rounded-3xl px-3 text-xs border-opacity-35 border-2 transition duration-300 transform hover:scale-105 text-[18px] w-[180px]">
+          <button className="border-white rounded-3xl px-3 text-18px border-opacity-35 border-2 transition duration-300 transform hover:scale-105 text-[18px] w-[180px]">
             View all Works
           </button>
         </div>

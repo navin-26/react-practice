@@ -10,6 +10,8 @@ import TeamSection from "../components/TeamSection";
 import PriceTableSection from "../components/PriceTableSection";
 import CallToAction from "../components/CallToActionSection";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+
 
 const HomePage = () => {
   return (
@@ -22,8 +24,9 @@ const HomePage = () => {
       <CallToAction />
       <ShowcaseSection />
       <TeamSection />
-      <PriceTableSection />
       <Contact />
+      <PriceTableSection />
+      <Footer />
     </div>
   );
 };

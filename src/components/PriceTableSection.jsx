@@ -1,5 +1,5 @@
 import { FaCheck } from "react-icons/fa";
-import HeroImg from "../assets/pricingTable.jpeg";
+import HeroImg from "../assets/pricingTable.png";
 import ScrollIndicator from "./ScrollIndicator";
 
 
@@ -57,16 +57,21 @@ function PriceTable({ plan, price, benefits }) {
 
 function PriceTableSection() {
   return (
-    <div className="relative overflow-hidden h-1130 text-white overflow-y-auto">
+    <div
+      id="pricing"
+      className="relative overflow-hidden h-[1130px] text-white overflow-y-auto"
+    >
       <img
         src={HeroImg}
         alt=""
-        className="absolute w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-purple-950 to-purple-800 opacity-45"></div>
       <div className="relative mx-[125px] my-[100px]  ">
         <div className="flex flex-col h-[146px] mx-auto w-[586px]">
-          <h3 className="text-[42px] font-semibold text-center leading-[52px]">Plans & Pricing</h3>
+          <h3 className="text-[42px] font-semibold text-center leading-[52px]">
+            Plans & Pricing
+          </h3>
           <h6 className="text-center mt-4 text-[22px]">
             Startup Framework is free forever — you only pay for custom domain
             hosting or to export your site.
