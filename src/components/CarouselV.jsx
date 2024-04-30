@@ -1,12 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faClone,
-  faDriversLicense,
-  faUser,
-  faComments,
-  faEnvelope,
   faGem,
-} from "@fortawesome/free-regular-svg-icons"; // Import the specific icons you need
+} from "@fortawesome/free-regular-svg-icons"; 
 
 import React, { useState } from "react";
 
@@ -30,7 +26,7 @@ const CarouselV = () => {
     {
       h1: "Our Mission",
       p1: "Empowering businesses to thrive in the digital age. Join us and embrace the future of business.",
-      c1i: faDriversLicense,
+      c1i: faGem,
       c1h: "Innovation",
       c1p: " Our forward-thinking approach ensures that we're always one step ahead. Experience innovation with us.",
       c2h: "Customer Satisfaction",
@@ -39,7 +35,7 @@ const CarouselV = () => {
     {
       h1: "Our Team",
       p1: "Meet the talented individuals behind our success. Join hands with us for unparalleled success.",
-      c1i: faUser,
+      c1i: faGem,
       c1h: "Diverse Expertise",
       c1p: "Our team consists of experts from various fields, ensuring comprehensive solutions. Experience expertise at its finest.",
       c2h: "Collaborative Culture",
@@ -48,7 +44,7 @@ const CarouselV = () => {
     {
       h1: "Client Testimonials",
       p1: "See what our clients have to say about us. Our satisfied clients share their success stories. Experience the difference with us today.",
-      c1i: faComments,
+      c1i: faClone,
       c1h: "Impressive Results",
       c1p: "Working with us has led to significant improvements in our clients' businesses. Trust us for impressive results.",
       c2h: "Professionalism",
@@ -57,7 +53,7 @@ const CarouselV = () => {
     {
       h1: "Contact Us",
       p1: "Get in touch with us today and let's discuss how we can help you. Our friendly team is eager to assist you. Reach out to us now for personalized solutions.",
-      c1i: faEnvelope,
+      c1i: faGem,
       c1h: "Reach Out",
       c1p: "Send us a message and we'll get back to you promptly. Your inquiries are important to us. Contact us now for swift assistance.",
       c2h: "Visit Our Office",

@@ -74,7 +74,7 @@ function ContactForm() {
                     {...register("name", {
                       required: "Name is required",
                       pattern: {
-                        value: /^[A-Za-z\s]+$/, // Regular expression to allow only text (letters and spaces)
+                        value: /^[A-Za-z\s]+$/,
                         message: "Name can only contain letters",
                       },
                     })}

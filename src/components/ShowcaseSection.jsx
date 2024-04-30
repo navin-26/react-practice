@@ -6,7 +6,7 @@ import ScrollIndicator from "./ScrollIndicator";
 
 function Showcases({ image, project, name }) {
   return (
-    <div className="flex flex-col items-center relative transition duration-300 transform hover:scale-105 cursor-pointer w-[470px] h-[371px]">
+    <div className="flex flex-col items-center relative transition duration-300 transform hover:scale-105 cursor-pointer w-[470px]  h-[371px]">
       <img
         src={image}
         alt=""

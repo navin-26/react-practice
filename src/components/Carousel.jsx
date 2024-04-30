@@ -14,7 +14,7 @@ const Carousel = ({ slides }) => {
   };
 
   useEffect(() => {
-    const interval = setInterval(autoSlide, 5000); // Auto-slide every 5 seconds
+    const interval = setInterval(autoSlide, 5000); 
     return () => clearInterval(interval);
   }, [currentIndex]);
 

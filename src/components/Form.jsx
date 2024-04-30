@@ -26,14 +26,14 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform validation
+  
     const formErrors = validateForm(formData);
     setErrors(formErrors);
     if (Object.keys(formErrors).length === 0) {
-      // Form is valid, submit the data or perform other actions
+ 
       console.log("Form submitted:", formData);
     } else {
-      // Form is invalid, do not submit
+
       console.error("Form validation errors:", formErrors);
     }
   };
@@ -72,7 +72,7 @@ function Form() {
           </p>
         </div>
 
-        <div className="w-[480px] h-[] md:w-1/2 bg-white rounded-lg shadow-md px-0 py-6 max-w-md ml-8 ">
+        <div className="w-[480px] h-[550px] md:w-1/2 bg-white rounded-lg shadow-md px-0 py-6 max-w-md ml-8 ">
           <div className="flex justify-between">
             <span
               className={`w-full border-b-4 pb-4 ${
@@ -83,7 +83,7 @@ function Form() {
                 onClick={() => {
                   setIsSignupActive(true);
                   setErrors({});
-                  setFormData({}); // Clear any existing errors
+                  setFormData({}); 
                 }}
                 className={`text-[14px] font-semibold focus:outline-none tracking-widest ${
                   isSignupActive
@@ -103,7 +103,7 @@ function Form() {
                 onClick={() => {
                   setIsSignupActive(false);
                   setErrors({});
-                  setFormData({}); // Clear any existing errors
+                  setFormData({}); 
                 }}
                 className={`text-[14px] font-semibold focus:outline-none tracking-widest ${
                   !isSignupActive
@@ -206,7 +206,7 @@ function Form() {
                 <span className="mx-4 text-gray-400 ">or</span>
                 <hr className="flex-grow border-gray-300" />
               </div>
-              <button  className="bg-blue-500 text-white py-2 px-4 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-[330px] h-[50px] rounded-3xl">
+              <button className="bg-blue-500 text-white py-2 px-4 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-[330px] h-[50px] rounded-3xl">
                 {isSignupActive ? "Login via Twitter" : "Login via Twitter"}
               </button>
             </div>
