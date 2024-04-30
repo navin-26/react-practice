@@ -9,16 +9,16 @@ import ScrollIndicator from "./ScrollIndicator";
 
 function Crew({ image, name, role, socialMedia }) {
   return (
-    <div className="flex flex-col items-start transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
-      <img src={image} className="h-16 w-16 rounded-full" />
-      <h5 className="font-medium text-lg my-3">{name}</h5>
-      <h6 className="mb-4 text-xs">{role}</h6>
+    <div className="flex flex-col items-start transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer h-[241px] w-[190px]">
+      <img src={image} className="h-[100px] w-[100px] rounded-full" />
+      <h5 className="font-medium text-[22px] my-3">{name}</h5>
+      <h6 className="mb-4 text-[16px]">{role}</h6>
       <div className="flex w-full ">
         {socialMedia.map((Icon, index) => (
           <a
             key={index}
             href="#"
-            className="text-white text-sm mr-6 hover:text-gray-300 transition duration-300 ease-in-out"
+            className="text-white text-[18px] mr-6 hover:text-gray-300 transition duration-300 ease-in-out"
           >
             <Icon />
           </a>
@@ -64,15 +64,17 @@ function TeamSection() {
   ];
 
   return (
-    <div className="h-screen bg-indigo-900 relative overflow-hidden text-white">
-      <div className="h-auto w-auto ml-44 mt-14 mr-33">
-        <h3 className="text-4xl font-bold">Startup Crew</h3>
-        <p className="my-6">
-          The most important part of the Startup Framework is the samples. The
-          samples form a set of 25 usable pages you can use as is or you can add
-          new blocks from UI Kit.
-        </p>
-        <div className="grid grid-cols-3 gap-6">
+    <div className="h-[1130px] bg-indigo-900 relative overflow-hidden text-white">
+      <div className="h-auto w-auto ml-[115px] mt-[100px] mr-33">
+        <div className="w-[754px] h-[179px]">
+          <h3 className="text-[42px] font-bold">Startup Crew</h3>
+          <p className="my-6 text-[22px] leading-[32px]">
+            The most important part of the Startup Framework is the samples. The
+            samples form a set of 25 usable pages you can use as is or you can
+            add new blocks from UI Kit.
+          </p>
+        </div>
+        <div className="grid grid-cols-3 gap-20 h-[543px] w-[764px] mt-[90px]">
           {crewMembers.map((member, index) => (
             <Crew key={index} {...member} />
           ))}
