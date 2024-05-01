@@ -26,7 +26,7 @@ function PriceTable({ plan, price, benefits }) {
   );
 
   return (
-    <div className="border-white border-opacity-10 border-[2.5px] px-14 py-14  text-white mt-3 rounded-lg relative h-[740px] w-[370px]">
+    <div className="border-white border-opacity-10 border-[2.5px] px-14 py-14  text-white mt-3 rounded-lg relative h-[740px] 2xl:w-[370px] xl:w-[330px] lg:w-[370px]">
       <h6 className="font-medium text-[22px]">{plan}</h6>
       <div className="relative flex justify-start mt-5">
         <h3 className="font-semibold mr-2 text-[58px] text-center">{price}</h3>
@@ -77,7 +77,7 @@ function PriceTableSection() {
             hosting or to export your site.
           </h6>
         </div>
-        <div className="grid grid-cols-3 gap-[80px] mt-4">
+        <div className="grid grid-cols-3 2xl:gap-[80px] xl:gap-[90px] lg:gap-[180px] mt-4">
           <PriceTable plan="Starter" price={9.99} benefits={commonBenefits} />
           <PriceTable
             plan="Professional"

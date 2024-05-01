@@ -6,12 +6,21 @@ import client4 from "../assets/client-4.jpeg";
 
 function TestimonialCard({ image, text, author }) {
   return (
-    <div className="container rounded-lg border-4 border-white relative max-auto h-[237px] w-[470px] flex px-[36px] py-[35px] items-start mt-10 gap-7 border-opacity-10">
+    <div className="container rounded-lg border-4 border-white relative  h-[237px] 2xl:w-[470px] xl:w-[440px] lg:w-[370px] flex 2xl:px-[36px] 2xl:py-[35px] xl:px-[33px] xl:py-[33px] lg:px-[25px] lg:py-[25px] items-start mt-10 gap-7 border-opacity-10">
       <div className="flex-none">
-        <img src={image} alt="" className="rounded-lg h-[70px] w-[70px] object-cover" />
+        <img
+          src={image}
+          alt=""
+          className="rounded-lg h-[70px] w-[70px] object-cover"
+        />
       </div>
       <div className="flex-grow">
-        <p className="text-white text-[18px]">{text}</p>
+        <p
+          className="text-white 2xl:text-[18px]
+        xl:text-[17px] lg:text-[15px]"
+        >
+          {text}
+        </p>
         <div className="absolute bottom-6">
           <h5 className="text-white text-opacity-30 uppercase tracking-widest font-medium text-[14px]">
             {author}

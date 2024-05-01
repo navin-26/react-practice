@@ -11,7 +11,7 @@ function content() {
         className="absolute top-0 left-0 w-full h-full object-cover  "
       />
 
-      <div className="w-full md:w-1/2 space-y-4 container mx-auto px-4 py-16 md:py-32 flex flex-col md:flex-row items-center justify-center text-center text-white relative z-10 ">
+      <div className="w-1/2   space-y-4 container mx-auto px-4 py-32 flex flex-row items-center justify-center text-center text-white relative z-10 ">
         <div>
           <h3 className="text-1xl text-white  md:mr-4 mb-2 tracking-wider font-medium ">
             FREE SAMPLE

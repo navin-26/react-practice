@@ -6,6 +6,8 @@
 body{
     font-family: DM Sans;
     background-color: #2F1893;
+    overflow-x: hidden;
+ 
    
 }
 .placeholder-text::placeholder {

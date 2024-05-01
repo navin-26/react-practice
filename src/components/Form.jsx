@@ -61,7 +61,7 @@ function Form() {
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
-      <section className="container mx-auto px-4 py-[100px]  flex flex-col md:flex-row items-center justify-center text-center text-white relative z-10 gap-[80px]">
+      <section className="container mx-auto px-4 py-[100px]  flex flex-row items-center justify-center text-center text-white relative z-10 gap-[80px]">
         <div className="w-[369px] h-[318px] pr-8">
           <h2 className="text-[42px] font-semibold leading-tight text-left">
             We solve digital problems with an outstanding creative flare
