@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage"; //
 
 function App() {
   return (
-    <BrowserRouter basename="/react-practice/">
+    <BrowserRouter basename="/react-practice">
       <Routes>
         <Route path="/" element={<HomePage />} />
         
