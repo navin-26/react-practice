@@ -1,7 +1,6 @@
 {
   "name": "frontend-practice",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://navin-26.github.io/react-practice/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
