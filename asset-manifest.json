@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/react-practice/static/css/main.097952ba.css",
+    "main.js": "/react-practice/static/js/main.108f2341.js",
+    "static/js/453.af7da935.chunk.js": "/react-practice/static/js/453.af7da935.chunk.js",
+    "static/media/project-1.jpeg": "/react-practice/static/media/project-1.3cd21cb070c51696c5d4.jpeg",
+    "static/media/project-2.jpeg": "/react-practice/static/media/project-2.064e08d955a647279b5e.jpeg",
+    "static/media/project-4.jpeg": "/react-practice/static/media/project-4.2ec0a3b1fab960627f50.jpeg",
+    "static/media/project-3.jpeg": "/react-practice/static/media/project-3.352641394673b29c5324.jpeg",
+    "static/media/contact.png": "/react-practice/static/media/contact.4be42fe67cd919b928c1.png",
+    "static/media/form.png": "/react-practice/static/media/form.7dd715d09919cd503a07.png",
+    "static/media/pricingTable.png": "/react-practice/static/media/pricingTable.749c632ec18dd58a0e71.png",
+    "static/media/features.png": "/react-practice/static/media/features.f797937103a8eedd2598.png",
+    "static/media/home.png": "/react-practice/static/media/home.6ad9218f45bfa3958f15.png",
+    "static/media/call-to-action.png": "/react-practice/static/media/call-to-action.2569643ba616774f0014.png",
+    "static/media/content.png": "/react-practice/static/media/content.6d8238fc3cd4b7e7c3e0.png",
+    "static/media/LapFe.png": "/react-practice/static/media/LapFe.f13712d59e8aa5016c67.png",
+    "static/media/client-3.jpeg": "/react-practice/static/media/client-3.cc6d2d887384b5733da9.jpeg",
+    "static/media/emp-2.jpeg": "/react-practice/static/media/emp-2.9f71b33b60fe3f768f81.jpeg",
+    "static/media/client-1.jpeg": "/react-practice/static/media/client-1.de06623532071848bb21.jpeg",
+    "static/media/emp-1.jpeg": "/react-practice/static/media/emp-1.de06623532071848bb21.jpeg",
+    "static/media/client-2.jpeg": "/react-practice/static/media/client-2.d780433082b2477475e9.jpeg",
+    "static/media/emp-4.jpeg": "/react-practice/static/media/emp-4.c5f8dd202c251616ab21.jpeg",
+    "static/media/emp-5.jpeg": "/react-practice/static/media/emp-5.e57507feb6f05d332483.jpeg",
+    "static/media/client-4.jpeg": "/react-practice/static/media/client-4.7e9806ffca35505bc81a.jpeg",
+    "static/media/emp-3.jpeg": "/react-practice/static/media/emp-3.85a91ce0a5ac5704cafa.jpeg",
+    "index.html": "/react-practice/index.html",
+    "main.097952ba.css.map": "/react-practice/static/css/main.097952ba.css.map",
+    "main.108f2341.js.map": "/react-practice/static/js/main.108f2341.js.map",
+    "453.af7da935.chunk.js.map": "/react-practice/static/js/453.af7da935.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.097952ba.css",
+    "static/js/main.108f2341.js"
+  ]
+}
