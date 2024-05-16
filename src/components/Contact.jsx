@@ -1,6 +1,6 @@
 import { FaPhoneAlt, FaEnvelope, FaBuilding } from "react-icons/fa";
 import HeroImg from "../assets/contact.png";
-import ScrollIndicator from "./ScrollIndicator";
+
 import { useForm } from "react-hook-form";
 
 function ContactForm() {
@@ -17,7 +17,7 @@ function ContactForm() {
   return (
     <div
       id="contacts"
-      className="relative overflow-hidden h-[770px] text-white "
+      className="relative overflow-hidden lg:h-[770px] sm:h-auto text-white "
     >
       <img
         src={HeroImg}
@@ -25,8 +25,8 @@ function ContactForm() {
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
-      <div className="relative mx-48 my-20 flex  justify-between h-auto">
-        <div className="py-[50px] w-96">
+      <div className="relative mx-auto my-20 flex  lg:justify-evenly lg:flex-row sm:flex-col sm:items-center">
+        <div className="py-[50px] md:w-96 sm:w-[200px]">
           <h3 className="text-[42px] font-medium">Let’s Keep in Touch</h3>
           <p className="my-6 text-left font-medium text-[22px]">
             We have created a new product that will help designers, developers
@@ -50,13 +50,13 @@ function ContactForm() {
             </div>
           </div>
         </div>
-        <div className=" bg-white rounded-lg shadow-md px-[50px] py-[58px] w-[470px] h-[570px]">
+        <div className=" bg-white rounded-lg shadow-md md:px-[50px] md:py-[58px] sm:px-[30px] sm:py-[38px] md:w-[470px] sm:w-[250px] h-auto">
           <form
             className="text-indigo-950  font-medium "
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="grid grid-cols-1 gap-y-4 text-sm">
-              <div className="flex  gap-4">
+              <div className="flex md:flex-row sm:flex-col gap-4">
                 <div className="w-full ">
                   <label
                     htmlFor="name"
@@ -68,7 +68,7 @@ function ContactForm() {
                     type="text"
                     id="name"
                     placeholder="First name"
-                    className={`input-field gray-300 border-gray-300 text-black rounded-3xl px-4 py-2 border-2 mt-2 w-[200px] h-[50px] placeholder-text ${
+                    className={`input-field gray-300 border-gray-300 text-black rounded-3xl px-4 py-2 border-2 mt-2 md:w-[200px] sm:w-auto h-[50px] placeholder-text ${
                       errors.name ? "border-red-500" : ""
                     }`}
                     {...register("name", {
@@ -94,7 +94,7 @@ function ContactForm() {
                   </label>
                   <select
                     id="budget"
-                    className="mt-2 input-field font-bold border-2 border-gray-300 text-indigo-950 rounded-3xl py-2 px-3 w-[140px] h-[50px] text-[18px]"
+                    className="mt-2 input-field font-bold border-2 border-gray-300 text-indigo-950 rounded-3xl py-2 px-3 md:w-[140px]  h-[50px] text-[18px]"
                   >
                     <option value="">500$</option>
                     <option value="low">700$</option>
@@ -106,7 +106,7 @@ function ContactForm() {
               <div className="w-full mt-2 mb-2">
                 <label
                   htmlFor="email"
-                  className="block font-bold tracking-widest"
+                  className="block font-bold tracking-widest text-[14px]"
                 >
                   INPUT FIELD
                 </label>
@@ -114,7 +114,7 @@ function ContactForm() {
                   type="email"
                   id="email"
                   placeholder=" name@mail.com"
-                  className={`input-field gray-300 border-gray-300 text-black rounded-3xl px-4 py-2 border-2 mt-2 w-[370px] h-[50px] placeholder-text ${
+                  className={`input-field gray-300 border-gray-300 text-black rounded-3xl px-4 py-2 border-2 mt-2 md:w-[370px] sm:w-auto h-[50px] placeholder-text ${
                     errors.email ? "border-red-500" : ""
                   }`}
                   {...register("email", {
@@ -141,12 +141,12 @@ function ContactForm() {
                 <textarea
                   id="message"
                   placeholder=" Message "
-                  className="mt-2 input-field border-2 border-gray-300 w-[370px] h-[110px] px-3 py-5 placeholder-text "
+                  className="mt-2 input-field border-2 border-gray-300 md:w-[370px] sm:w-auto h-[110px] px-3 py-5 placeholder-text "
                   required
                 ></textarea>
               </div>
             </div>
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4 flex md:flex-row sm:flex-col justify-between">
               <label className="inline-flex items-center">
                 <input
                   type="checkbox"
@@ -158,14 +158,13 @@ function ContactForm() {
               </label>
               <button
                 type="submit"
-                className="bg-teal-400 text-white py-2 px-6 rounded-full h-[50px] w-[120px] text-[18px]"
+                className="bg-teal-400 text-white py-2 px-6 rounded-full h-[50px] w-[120px] text-[18px] max-md:mt-4"
               >
                 Send
               </button>
             </div>
           </form>
         </div>
-        <ScrollIndicator />
       </div>
     </div>
   );

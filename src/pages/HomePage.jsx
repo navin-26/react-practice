@@ -1,6 +1,7 @@
 import React from "react";
 
 import Home from "../components/Home";
+
 import Content from "../components/Content";
 import Features from "../components/Features";
 import Form from "../components/Form";
@@ -27,6 +28,7 @@ const HomePage = () => {
       <Contact />
       <PriceTableSection />
       <Footer />
+      
     </div>
   );
 };

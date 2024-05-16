@@ -8,12 +8,14 @@ import { Link } from "react-scroll";
 
 function Footer() {
   return (
-    <div className="h-[240px] relative overflow-hidden">
-      <div className="grid grid-rows-3 text-white my-[49.4px] mx-[115px] gap-5">
-        <div className="flex justify-between">
-          <h4 className="text-[24px] font-medium">Startup 3</h4>
+    <div className="lg:h-[240px] sm:h-auto relative overflow-hidden">
+      <div className="flex flex-col text-white md:my-[49.4px] md:mx-[115px] sm:my-[40px] sm:mx-[30px] gap-5 max-md:items-center">
+        <div className="flex max-md:flex-col max-md:gap-3 justify-between">
+          <h4 className="md:text-[24px] sm:text-[18px] font-medium">
+            Startup 3
+          </h4>
           <div>
-            <span className="flex gap-6 text-[16px]">
+            <span className="flex gap-6 md:text-[16px] sm:text-[12px] max-md:my-3">
               <Link
                 to="policies"
                 smooth={true}
@@ -42,9 +44,12 @@ function Footer() {
             </span>
           </div>
         </div>
-        <div className="line w-full border-t-2 border-white border-opacity-50 my-4"></div>
-        <div className="flex justify-between">
-          <span className="flex gap-6 cursor-pointer ">
+        <div className="line w-auto border-t-2 border-white border-opacity-50 my-4 h-1 max-md:hidden"></div>
+        <div className="flex flex-row  justify-between">
+          <span
+            className="flex xl:gap-6 lg:gap-5 md:gap-3
+          max-lg:flex-col cursor-pointer max-md:hidden "
+          >
             <Link
               to="tour"
               smooth={true}
@@ -94,8 +99,8 @@ function Footer() {
               Contacts
             </Link>
           </span>
-          <div>
-            <span>
+          <div className="flex ">
+            <span className="content-end md:text-[16px] sm:text-[12px]">
               <h6>© 2017 Designmodo. All rights reserved.</h6>
             </span>
           </div>

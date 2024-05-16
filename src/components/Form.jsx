@@ -54,16 +54,19 @@ function Form() {
   };
 
   return (
-    <div id="form-section" className="relative overflow-hidden h-[750px]">
+    <div
+      id="form-section"
+      className="relative overflow-hidden lg:h-[750px] sm:h-auto"
+    >
       <img
         src={HeroImg}
         alt=""
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
-      <section className="container mx-auto px-4 py-[100px]  flex flex-row items-center justify-center text-center text-white relative z-10 gap-[80px]">
-        <div className="w-[369px] h-[318px] pr-8">
-          <h2 className="text-[42px] font-semibold leading-tight text-left">
+      <section className=" mx-auto px-4 py-[100px]  flex lg:flex-row sm:flex-col items-center justify-center text-center text-white relative z-10 gap-[80px]">
+        <div className="lg:w-[369px] lg:h-[318px] sm:w-[260px] sm:h-[318px] px-5">
+          <h2 className="lg:text-[42px] md:text-[28px] sm:text-[28px] font-semibold leading-tight text-left">
             We solve digital problems with an outstanding creative flare
           </h2>
           <p className="text-[16px] mt-4 leading-7 text-left font-thin">
@@ -72,7 +75,7 @@ function Form() {
           </p>
         </div>
 
-        <div className="w-[480px] h-[550px] md:w-1/2 bg-white rounded-lg shadow-md px-0 py-6 max-w-md ml-8 ">
+        <div className="md:w-[480px] sm:w-[250px]  md:h-[550px] sm:h-auto  bg-white rounded-lg shadow-md  py-6 lg:ml-8 ">
           <div className="flex justify-between">
             <span
               className={`w-full border-b-4 pb-4 ${
@@ -83,7 +86,7 @@ function Form() {
                 onClick={() => {
                   setIsSignupActive(true);
                   setErrors({});
-                  setFormData({}); 
+                  setFormData({});
                 }}
                 className={`text-[14px] font-semibold focus:outline-none tracking-widest ${
                   isSignupActive
@@ -103,7 +106,7 @@ function Form() {
                 onClick={() => {
                   setIsSignupActive(false);
                   setErrors({});
-                  setFormData({}); 
+                  setFormData({});
                 }}
                 className={`text-[14px] font-semibold focus:outline-none tracking-widest ${
                   !isSignupActive
@@ -115,11 +118,14 @@ function Form() {
               </button>
             </span>
           </div>
-          <form onSubmit={handleSubmit} className="px-16 pb-10">
+          <form
+            onSubmit={handleSubmit}
+            className="md:px-16 md:pb-10 sm:px-8 sm:pb-8"
+          >
             <h2 className="text-2xl font-bold text-center mb-6">
               {isSignupActive ? "Sign Up" : "Login"}
             </h2>
-            <div className="space-y-8">
+            <div className="md:space-y-8 sm:space-y-7">
               {isSignupActive && (
                 <>
                   <div className="flex flex-col">
@@ -127,7 +133,7 @@ function Form() {
                       type="text"
                       id="email"
                       name="email"
-                      className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
+                      className="shadow-sm py-2 px-5 md:w-[330px] sm:w-auto h-[50px] placeholder-gray-400
                      text-black border text-[18px] border-gray-300 rounded-3xl"
                       placeholder="Your email"
                       value={formData.email}
@@ -142,7 +148,7 @@ function Form() {
                       type="password"
                       id="password"
                       name="password"
-                      className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
+                      className="shadow-sm py-2 px-5 md:w-[330px] sm:w-auto h-[50px] placeholder-gray-400
                      text-black border text-[18px] border-gray-300 rounded-3xl"
                       placeholder="Your password"
                       value={formData.password}
@@ -159,7 +165,7 @@ function Form() {
                       type="text"
                       id="email"
                       name="email"
-                      className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
+                      className="shadow-sm py-2 px-5 md:w-[330px] sm:w-auto h-[50px] placeholder-gray-400
                      text-black border text-[18px] border-gray-300 rounded-3xl"
                       placeholder="Your email"
                       value={formData.email}
@@ -172,7 +178,7 @@ function Form() {
                       type="password"
                       id="password"
                       name="password"
-                      className="shadow-sm py-2 px-5 w-[330px] h-[50px] placeholder-gray-400
+                      className="shadow-sm py-2 px-5 md:w-[330px] sm:w-auto h-[50px] placeholder-gray-400
                      text-black border text-[18px] border-gray-300 rounded-3xl"
                       placeholder="Your password"
                       value={formData.password}
@@ -183,30 +189,33 @@ function Form() {
                 </>
               )}
               {!isSignupActive && (
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-4 text-left">
                   <div className="flex items-center space-x-2">
                     <input type="checkbox" id="remember" className="w-4 h-4" />
-                    <label htmlFor="remember" className="text-sm text-gray-700">
+                    <label
+                      htmlFor="remember"
+                      className="md:text-sm sm:text-[12px] text-gray-700"
+                    >
                       Remember me
                     </label>
                   </div>
                   <a
                     href="#"
-                    className="text-sm text-purple-950 hover:text-indigo-700"
+                    className="md:text-sm sm:text-[12px] text-gray-700 hover:text-indigo-700"
                   >
                     Forgot password?
                   </a>
                 </div>
               )}
-              <button className="bg-teal-400 text-white py-2 px-4 font-medium hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-[330px] h-[50px] rounded-3xl">
+              <button className="bg-teal-400 text-white py-2 px-4 font-medium hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 md:w-[330px] sm:w-auto h-[50px] rounded-3xl">
                 {isSignupActive ? "Create an Account" : "Login"}
               </button>
-              <div className="flex items-center my-3">
+              <div className="flex items-center md:my-3">
                 <hr className="flex-grow border-gray-300" />
                 <span className="mx-4 text-gray-400 ">or</span>
                 <hr className="flex-grow border-gray-300" />
               </div>
-              <button className="bg-blue-500 text-white py-2 px-4 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-[330px] h-[50px] rounded-3xl">
+              <button className="bg-blue-500 text-white py-2 px-4 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 md:w-[330px] sm:w-auto h-[50px] rounded-3xl">
                 {isSignupActive ? "Login via Twitter" : "Login via Twitter"}
               </button>
             </div>

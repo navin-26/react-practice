@@ -5,7 +5,7 @@ import emp3 from "../assets/emp-3.jpeg";
 import emp4 from "../assets/emp-4.jpeg";
 import emp5 from "../assets/emp-5.jpeg";
 import { FaDribbble, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
-import ScrollIndicator from "./ScrollIndicator";
+
 
 function Crew({ image, name, role, socialMedia }) {
   return (
@@ -64,22 +64,23 @@ function TeamSection() {
   ];
 
   return (
-    <div className="h-[1130px]  relative overflow-hidden text-white">
-      <div className="h-auto w-auto ml-[115px] mt-[100px] mr-33">
-        <div className="w-[754px] h-[179px]">
-          <h3 className="text-[42px] font-bold">Startup Crew</h3>
-          <p className="my-6 text-[22px] leading-[32px]">
+    <div className="lg:h-[1130px] sm:h-auto  relative  text-white overflow-x-hidden overflow-y-auto">
+      <div className=" w-auto sm:mx-[50px] lg:ml-[115px] mt-[100px] mb-[100px] mr-33">
+        <div className="lg:w-[754px] lg:h-[179px] sm:w-auto sm:h-[229px] md:w-[554px] md:h-[179px]">
+          <h3 className="lg:text-[42px] md:text-[32px] sm:text-[28px] font-bold">
+            Startup Crew
+          </h3>
+          <p className="my-6 lg:text-[22px] md:text-[20px] sm:text-[15px] leading-[32px]">
             The most important part of the Startup Framework is the samples. The
             samples form a set of 25 usable pages you can use as is or you can
             add new blocks from UI Kit.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-20 h-[543px] w-[764px] mt-[90px]">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-20 lg:h-[543px] lg:w-[764px] md:h-auto md:w-[600px] mt-[90px]">
           {crewMembers.map((member, index) => (
             <Crew key={index} {...member} />
           ))}
         </div>
-        <ScrollIndicator />
       </div>
     </div>
   );

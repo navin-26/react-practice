@@ -55,33 +55,33 @@ const CarouselV = () => {
       p1: "Get in touch with us today and let's discuss how we can help you. Our friendly team is eager to assist you. Reach out to us now for personalized solutions.",
       c1i: faGem,
       c1h: "Reach Out",
-      c1p: "Send us a message and we'll get back to you promptly. Your inquiries are important to us. Contact us now for swift assistance.",
+      c1p: "Send us a message and we'll get back to you promptly. Your inquiries are important to us.",
       c2h: "Visit Our Office",
-      c2p: "Send us a message and we'll get back to you promptly. Your inquiries are important to us. Contact us now for swift assistance.",
+      c2p: "Send us a message and we'll get back to you promptly. Your inquiries are important to us.",
     },
   ];
 
   return (
-    <div className="flex flex-row gap-12">
-      <div className="ml-[510px] ">
-        <div className="flex flex-col justify-start text-start gap-3 w-[600px] h-[10.5rem] ">
-          <h6 className="text-[2.625rem] font-medium">
+    <div className="lg:flex flex-row gap-12  lg:w-[500px] max-lg:justify-center ">
+      <div className="xl:ml-[510px] lg:ml-[350px] flex flex-col lg:items-center ">
+        <div className="flex flex-col justify-start text-start gap-3 xl:w-[600px] lg:w-[600px] sm:w-auto h-[10.5rem] max-lg:text-center">
+          <h6 className="lg:text-[2.625rem] sm:text-[25px] font-medium sm:font-bold">
             {slides[currentIndex].h1}
           </h6>
-          <p className="text-[1.375rem] font-medium">
+          <p className="lg:text-[1.375rem] sm:text-[15px] md:text-[18px]  font-medium">
             {slides[currentIndex].p1}
           </p>
         </div>
-        <div className="grid grid-cols-2  mt-10">
+        <div className="lg:grid grid-cols-2  mt-10 max-lg:hidden">
           <div className=" flex flex-col justify-start  text-start gap-5 h-[11.625rem] w-[16.938rem] ">
             <FontAwesomeIcon
               className="h-8 w-8"
               icon={slides[currentIndex].c1i}
             />
-            <h3 className="text-[0.875rem] uppercase font-medium tracking-widest">
+            <h3 className="lg:text-[0.875rem] sm:text-[12px] uppercase font-medium tracking-widest">
               {slides[currentIndex].c1h}
             </h3>
-            <p className="text-[1rem] leading-8 font-extralight">
+            <p className="lg:text-[1rem] sm:text-[12px] leading-8 font-extralight">
               {slides[currentIndex].c1p}
             </p>
           </div>
@@ -90,16 +90,16 @@ const CarouselV = () => {
               className="h-8 w-8"
               icon={slides[currentIndex].c1i}
             />
-            <h3 className="text-[0.875rem] uppercase font-medium tracking-widest">
+            <h3 className="lg:text-[0.875rem] sm:text-[12px] uppercase font-medium tracking-widest">
               {slides[currentIndex].c2h}
             </h3>
-            <p className="text-[1rem] leading-8 font-extralight">
+            <p className="lg:text-[1rem] sm:text-[12px] leading-8 font-extralight">
               {slides[currentIndex].c2p}
             </p>
           </div>
         </div>
       </div>
-      <div className=" flex flex-col gap-2 absolute right-32 h-1/2  justify-center">
+      <div className=" flex lg:flex-col lg:gap-2  lg:right-32 lg:mt-[120px] lg:h-1/2  justify-center max-lg:mt-5  ">
         {slides.map((_, index) => (
           <button
             key={index}

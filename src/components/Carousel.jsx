@@ -50,11 +50,13 @@ const Carousel = ({ slides }) => {
       >
         <FontAwesomeIcon icon={faAngleRight} />
       </button>
-      <div className="grid grid-rows-2 w-[710px] text-center">
-        <h2 className="text-[71px] font-semibold">
+      <div className="grid grid-rows-2 lg:w-[710px]  md:w-[610px]  sm:w-[180px]  text-center">
+        <h2 className="xl:text-[71px] md:text-[50px] lg:text-[65px] sm:text-[28px] font-semibold">
           {slides[currentIndex].heading}
         </h2>
-        <p className="text-[22px] mt-3">{slides[currentIndex].paragraph}</p>
+        <p className="xl:text-[22px] md:text-[15px] lg:text-[20px] sm:text-[12px] md:mt-3 sm:mt-0 text-center">
+          {slides[currentIndex].paragraph}
+        </p>
       </div>
       <div className="absolute left-0 right-0 mt-5 flex justify-center">
         {slides.map((_, index) => (

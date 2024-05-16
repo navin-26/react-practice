@@ -2,7 +2,7 @@ import project1 from "../assets/project-1.jpeg";
 import project2 from "../assets/project-2.jpeg";
 import project3 from "../assets/project-3.jpeg";
 import project4 from "../assets/project-4.jpeg";
-import ScrollIndicator from "./ScrollIndicator";
+
 
 function Showcases({ image, project, name }) {
   return (
@@ -22,17 +22,20 @@ function Showcases({ image, project, name }) {
 
 function ShowcaseSection() {
   return (
-    <div id="works" className="flex flex-col items-center  h-[1130px] w-full">
+    <div
+      id="works"
+      className="flex flex-col items-center sm:h-auto  md:h-[1130px] w-full overflow-hidden"
+    >
       <div className="relative overflow-hidden px-[200px] py-[80px] text-white  ">
         <div className="flex justify-between mb-6 ">
           <h3 className="lg:text-[40px] md:text-[30px] sm:text-[25px] font-bold w-[213px]  h-[52px]">
             Last works
           </h3>
-          <button className="border-white rounded-3xl px-3 text-18px border-opacity-35 border-2 transition duration-300 transform hover:scale-105 text-[18px] lg:w-[180px] ">
+          <button className="border-white rounded-3xl px-3 lg:text-[18px] sm:text-[13px] border-opacity-35 border-2 transition duration-300 transform hover:scale-105 text-[18px] lg:w-[180px] sm:w-[120px] max-md:hidden">
             View all Works
           </button>
         </div>
-        <div className="container grid grid-cols-1 sm:grid-rows-2 md:grid-cols-2 2xl:gap-x-14 lg:gap-5 md:gap-6 md:gap-y-52 h-816px lg:w-970px md:mt-16">
+        <div className="container grid grid-cols-1 sm:grid-rows-2 md:grid-cols-2 2xl:gap-x-14 lg:gap-5 md:gap-6  h-816px lg:w-970px md:mt-16">
           <Showcases image={project1} project="UI KIT" name="Mozart Project" />
           <Showcases
             image={project2}
@@ -42,7 +45,6 @@ function ShowcaseSection() {
           <Showcases image={project3} project="Photos" name="From the Sky" />
           <Showcases image={project4} project="Pictures" name="Air Forces" />
         </div>
-        <ScrollIndicator />
       </div>
     </div>
   );
