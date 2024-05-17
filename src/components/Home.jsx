@@ -50,7 +50,7 @@ function Home() {
       />
 
       <header className="relative md:top-16 sm:top-10 left-0 right-0 flex justify-center z-10 ">
-        <nav className="flex md:space-x-9 sm:space-x-3 xl:text-[18px] md:text-[15px] lg:text-[15px] sm:text-[13px]">
+        <nav className="flex md:space-x-9 sm:space-x-[14px] xl:text-[18px] md:text-[15px] lg:text-[15px] sm:text-[13px]">
           <Link to="/" className="text-gray-300 hover:text-white">
             Home
           </Link>
