@@ -1,12 +1,10 @@
-import {
-  FaDribbble,
-  FaTwitter,
-  FaFacebook,
-  FaGooglePlus,
-} from "react-icons/fa";
-import { Link } from "react-scroll"; 
+import React from "react";
+import { FaTwitter, FaFacebook, FaGooglePlus } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="lg:h-[240px] sm:h-auto relative overflow-hidden">
       <div className="flex flex-col text-white md:my-[49.4px] md:mx-[115px] sm:my-[40px] sm:mx-[30px] gap-5 max-md:items-center">
@@ -32,24 +30,21 @@ function Footer() {
               >
                 Terms
               </Link>
-              <a href="#">
+              <a href="#" aria-label="Twitter">
                 <FaTwitter />
               </a>
-              <a href="#">
+              <a href="#" aria-label="Facebook">
                 <FaFacebook />
               </a>
-              <a href="#">
+              <a href="#" aria-label="Google Plus">
                 <FaGooglePlus />
               </a>
             </span>
           </div>
         </div>
         <div className="line w-auto border-t-2 border-white border-opacity-50 my-4 h-1 max-md:hidden"></div>
-        <div className="flex flex-row  justify-between">
-          <span
-            className="flex xl:gap-6 lg:gap-5 md:gap-3
-          max-lg:flex-col cursor-pointer max-md:hidden "
-          >
+        <div className="flex flex-row justify-between">
+          <span className="flex xl:gap-6 lg:gap-5 md:gap-3 max-lg:flex-col cursor-pointer max-md:hidden ">
             <Link
               to="tour"
               smooth={true}
@@ -101,7 +96,7 @@ function Footer() {
           </span>
           <div className="flex ">
             <span className="content-end md:text-[16px] sm:text-[12px]">
-              <h6>© 2017 Designmodo. All rights reserved.</h6>
+              <h6>© {currentYear} Designmodo. All rights reserved.</h6>
             </span>
           </div>
         </div>

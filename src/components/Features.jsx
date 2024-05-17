@@ -1,3 +1,4 @@
+import React from "react";
 import HeroImg from "../assets/features.png";
 import CarouselV from "./CarouselV";
 import LapFe from "../assets/LapFe.png";
@@ -10,16 +11,17 @@ const Features = () => {
     >
       <img
         src={HeroImg}
-        alt=""
-        className="absolute top-0 left-0 w-full h-full object-cover "
+        alt="Features Background"
+        className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
       <img
         className="absolute w-1/3 h-[33.438rem] max-lg:hidden"
         src={LapFe}
-        alt="Laptop "
+        alt="Laptop"
       />
-      <div className="lg:w-1/2 sm:w-auto max-lg:flex justify-center z-20 max-lg:mx-4 max">
+
+      <div className="lg:w-1/2 sm:w-auto max-lg:flex justify-center z-20 max-lg:mx-4">
         <CarouselV />
       </div>
     </div>
