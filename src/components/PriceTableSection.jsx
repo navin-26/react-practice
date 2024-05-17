@@ -49,7 +49,7 @@ function PriceTable({ plan, price, benefits }) {
           ))}
         </ul>
       </div>
-      <button className="border-2 border-white border-opacity-35 xl:px-14 xl:py-3 lg:px-10 lg:py-2 sm:px-8 sm:py-2 rounded-full mt-8 xl:text-[20px] lg:text-[15px] sm:text-[15px] hover:bg-rose-500 transition duration-300 xl:h-[60px] xl:w-[230px] lg:h-[50px] lg:w-[180px] sm:h-[40px] sm:w-[150px]">
+      <button className="border-2 border-white border-opacity-35 xl:px-14 xl:py-3 lg:px-10 lg:py-2 sm:px-8 sm:py-2 rounded-full mt-8 xl:text-[20px] lg:text-[15px] sm:text-[14px] hover:bg-rose-500 transition duration-300 xl:h-[60px] xl:w-[230px] lg:h-[50px] lg:w-[180px] sm:h-[60px] sm:w-[150px]">
         Get Started
       </button>
     </div>
