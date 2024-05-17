@@ -50,7 +50,7 @@ function ContactForm() {
             </div>
           </div>
         </div>
-        <div className=" bg-white rounded-lg shadow-md md:px-[50px] md:py-[58px] sm:px-[30px] sm:py-[38px] md:w-[470px] sm:w-[250px] h-auto">
+        <div className=" bg-white rounded-lg shadow-md md:px-[50px] md:py-[58px] sm:px-[30px] sm:py-[38px] md:w-[470px] sm:w-[275px] h-auto">
           <form
             className="text-indigo-950  font-medium "
             onSubmit={handleSubmit(onSubmit)}

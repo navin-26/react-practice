@@ -75,7 +75,7 @@ function Form() {
           </p>
         </div>
 
-        <div className="md:w-[480px] sm:w-[250px]  md:h-[550px] sm:h-auto  bg-white rounded-lg shadow-md  py-6 lg:ml-8 ">
+        <div className="md:w-[480px] sm:w-[275px]  md:h-[550px] sm:h-auto  bg-white rounded-lg shadow-md  py-6 lg:ml-8 ">
           <div className="flex justify-between">
             <span
               className={`w-full border-b-4 pb-4 ${
